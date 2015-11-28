@@ -16,11 +16,9 @@ public class PricingRule {
     }
 
     public int getCumulatedPrice(int amount) {
-        if (specialPrice!=null && amount>=specialPrice.getAmount()) {
-            int cumulatedPrice = 0;
-            cumulatedPrice += amount / specialPrice.getAmount() * specialPrice.getPrice();
-            cumulatedPrice += amount % specialPrice.getAmount() * unitPrice;
-            return cumulatedPrice;
+        if (specialPrice!=null) {
+            return amount / specialPrice.getAmount() * specialPrice.getPrice()
+                    + amount % specialPrice.getAmount() * unitPrice;
         } else {
             return amount * unitPrice;
         }
