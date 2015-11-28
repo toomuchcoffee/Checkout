@@ -1,3 +1,6 @@
+package de.checkout;
+
+import de.checkout.config.PricingConfig;
 import org.junit.Test;
 
 import java.util.Map;
@@ -5,7 +8,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 public class TestPrice {
-    private Map<String, PricingRule> rules = PricingRule.getRulesMap();
+    private Map<String, PricingRule> rules = PricingConfig.getRulesMap();
 
     public int calculatePrice(String goods) {
         CheckOut co = new CheckOut(rules);

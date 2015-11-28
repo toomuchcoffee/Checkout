@@ -1,3 +1,5 @@
+package de.checkout;
+
 public class SpecialPrice {
     private int amount;
     private int price;

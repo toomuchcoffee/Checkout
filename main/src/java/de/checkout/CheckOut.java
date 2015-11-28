@@ -1,3 +1,5 @@
+package de.checkout;
+
 import java.util.HashMap;
 import java.util.Map;
 
